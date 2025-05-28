@@ -5,13 +5,23 @@ document.addEventListener('DOMContentLoaded', function () {
   menuBtn.addEventListener('click', function (e) {
     e.stopPropagation();
     sidebar.classList.toggle('open');
-    menuBtn.style.display = sidebar.classList.contains('open') ? 'none' : 'block';
+    if (sidebar.classList.contains('open')) {
+      menuBtn.style.display = 'none';  // hide immediately when open
+    } else {
+      // delay showing hamburger by 300ms after closing
+      setTimeout(() => {
+        menuBtn.style.display = 'block';
+      }, 300);
+    }
   });
 
   document.addEventListener('click', function (e) {
     if (sidebar.classList.contains('open') && !sidebar.contains(e.target)) {
       sidebar.classList.remove('open');
-      menuBtn.style.display = 'block';
+      // delay showing hamburger by 300ms after closing
+      setTimeout(() => {
+        menuBtn.style.display = 'block';
+      }, 300);
     }
   });
 
