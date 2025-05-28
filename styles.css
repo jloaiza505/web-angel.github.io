@@ -202,3 +202,47 @@ body.dark-mode .toggle-label {
 body.dark-mode .toggle-button {
   color: #d1d5db;
 }
+
+
+/* Hamburger Button (Mobile) */
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  z-index: 1001; /* Make sure it's above the sidebar */
+  display: none;
+  color: #111827;
+}
+
+/* Sidebar settings for mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+}
+
+/* Hamburger before sidebar */
+.sidebar.open ~ .hamburger {
+  display: none !important;
+}
+
+
+
