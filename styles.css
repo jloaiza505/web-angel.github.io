@@ -212,30 +212,33 @@ body.dark-mode .toggle-button {
   background: none;
   border: none;
   font-size: 2rem;
-  z-index: 1001; /* Make sure it's above the sidebar */
-  display: none;
+  z-index: 1100;
   color: #111827;
+  display: none;
 }
 
 /* Sidebar settings for mobile */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+    .hamburger {
+        display: block;
+    }
 
-  .sidebar {
+    .sidebar {
     position: fixed;
     top: 0;
     left: 0;
+    width: 250px;
     height: 100%;
-    z-index: 1000;
+    background-color: #f3f4f6; /* light gray */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-  }
+    z-index: 1000;
+    }
 
-  .sidebar.open {
+    /* Show sidebar when .open is added */
+    .sidebar.open {
     transform: translateX(0);
-  }
+    }
 
 }
 
