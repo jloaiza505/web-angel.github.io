@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'Adonis New';
+  src: url('./fonts/AdonisC Italic.oft') format('woff2');
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Base Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f3f4f6; /* gray-100 */
+  color: #111827; /* gray-900 */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 16rem; /* 64 */
+  background-color: #ffffff;
+  padding: 1.5rem; /* 6 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Apply to main title */
+.title {
+  font-family: 'AdonisC Italic';
+  font-style: italic;
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: bold;
+  margin-bottom: 0rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb; /* light gray border */
+}
+
+.title-link {
+  font-family: 'AdonisC Italic';
+  font-style: italic;
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 0rem;
+  padding-bottom: 1rem;
+  color: #041521;
+}
+
+/* Apply to section subtitles */
+.section-title {
+  font-family: 'AdonisC Italic';
+  font-style: italic;
+  font-size: 1rem; /* text-sm */
+  font-weight: 600;
+  color: #0b3555; /* gray-600 */
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  font-family: 'AdonisC Italic';
+  font-style: italic;
+  font-size: 1rem; /* text-lg */
+  text-decoration: none;
+  color: #111827;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #3b82f6; /* blue-500 */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e7eb; /* gray-200 */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.main-image {
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay Text */
+.overlay-text {
+  font-family: 'AdonisC Italic';
+  font-style: italic;
+  position: absolute;
+  text-align: right;
+  bottom: 1rem;
+  right: 1rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevent blocking image interaction */
+}
+
+/* Show on hover */
+.image-container:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+  margin-top: auto; /* Push to bottom */
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb; /* light gray border */
+}
+
+.toggle-label {
+  font-size: 0.875rem;
+  color: #374151; /* gray-700 */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+body.dark-mode {
+  background-color: #1f2937; /* gray-800 */
+  color: #f3f4f6; /* gray-100 */
+}
+
+body.dark-mode .sidebar {
+  background-color: #111827; /* gray-900 */
+}
+
+body.dark-mode .title-link {
+  color: #d1d5db; /* gray-300 */
+}
+
+body.dark-mode .nav-link {
+  color: #d1d5db; /* gray-300 */
+}
+
+body.dark-mode .nav-link:hover {
+  color: #60a5fa; /* blue-400 */
+}
+
+body.dark-mode .section-title {
+  color: #cccccc; /* gray-400 */
+}
+
+body.dark-mode .main-content {
+  background-color: #374151; /* gray-700 */
+}
+
+body.dark-mode .dark-toggle {
+  border-top: 1px solid #4b5563; /* darker border */
+}
+
+body.dark-mode .toggle-label {
+  color: #d1d5db;
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-button span {
+  font-size: 1.2rem;
+}
+
+body.dark-mode .toggle-button {
+  color: #d1d5db;
+}
