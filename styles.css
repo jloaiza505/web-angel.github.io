@@ -242,10 +242,5 @@ body.dark-mode .toggle-button {
 
 }
 
-/* Hamburger before sidebar */
-.sidebar.open ~ .hamburger {
-  display: none !important;
-}
-
 
 
