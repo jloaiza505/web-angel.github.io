@@ -22,7 +22,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 16rem; /* 64 */
+  width: 12rem; /* 64 */
   background-color: #ffffff;
   padding: 1.5rem; /* 6 */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -101,7 +101,7 @@ body {
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
   display: block;
 }
 
@@ -241,6 +241,7 @@ body.dark-mode .toggle-button {
     }
 
 }
+
 
 
 
